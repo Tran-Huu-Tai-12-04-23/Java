@@ -27,13 +27,19 @@ public class Rectangle {
     }
 
     public void setWidth( float width) {
-        this.width = width ;
+        if ( width > 0 ){
+            this.width = width ;
+        }
     }
     public void setLength( float length) {
-        this.length = length ;
+        if( length > 0 ) {
+            this.length = length ;
+        }
     }
 
+    @Override
     public String toString() {
-        return String.format("Width : %f\nLength : %f \nArea : %f \nPerimeter : %f ", this.width , this.length,this.getArea() , this.getPerimeter());
+        return String.format("Rectangle[width : %f,length : %f ]", this.width , this.length);
     }
+    
 }

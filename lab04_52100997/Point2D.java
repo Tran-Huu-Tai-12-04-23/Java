@@ -12,10 +12,10 @@ public class Point2D {
         this.y = y ;
     }
 
-    public float getx(){
-        return this.x ; 
+    public float getX(){
+        return this.x ;
     }
-    public float gety() {
+    public float getY() {
         return this.y;
     }
     
