@@ -48,16 +48,21 @@ public class Fraction {
     }
 
     public void reducer() {
-        if( this.numberator % this.denominator == 0 
-        && this.numberator > this.denominator) {
-            this.numberator /= this.denominator ;
-            this.denominator /=this.denominator ;
+        int gdc ;
+        int s1 = this.numberator , s2 = this.denominator ;
+        if (s1 == 0 || s2 == 0){
+            gdc = s1 + s2;
         }
-        else if( this.denominator % this.numberator == 0 
-        && this.denominator > this.numberator) {
-            this.denominator = this.denominator / this.numberator;
-            this.numberator /= this.numberator ;
+        while (s1 != s2){
+            if (s1 > s2){
+                s1 -= s2; 
+            }else{
+                s2 -= s1;
+            }
         }
+        gdc =s1;
+        this.numberator /= gdc;
+        this.denominator /= gdc;
     }
 
     @Override
